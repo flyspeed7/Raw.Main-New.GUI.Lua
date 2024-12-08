@@ -396,7 +396,7 @@ function OrionLib:MakeNotification(NotificationConfig)
                         Parent = NotificationParent, 
                         Size = UDim2.new(1, 0, 0, 0),
                         Position = UDim2.new(1, -55, 0, 0),
-                        BackgroundTransparency = 0.5,
+                        BackgroundTransparency = 0.4,
                         AutomaticSize = Enum.AutomaticSize.Y
                 }), {
                         MakeElement("Stroke", Color3.fromRGB(93, 93, 93), 1.2),
@@ -467,7 +467,7 @@ function OrionLib:MakeWindow(WindowConfig)
                 WindowConfig.IntroEnabled = true
         end
         WindowConfig.IntroToggleIcon = WindowConfig.IntroToggleIcon or "rbxassetid://8834748103"
-        WindowConfig.IntroText = WindowConfig.IntroText or "B&Z-X 欢迎你的使用!."
+        WindowConfig.IntroText = WindowConfig.IntroText or "欢迎使用秋枫脚本."
         WindowConfig.CloseCallback = WindowConfig.CloseCallback or function() end
         WindowConfig.ShowIcon = WindowConfig.ShowIcon or false
         WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://8834748103"
@@ -563,13 +563,13 @@ function OrionLib:MakeWindow(WindowConfig)
                                 AddThemeObject(MakeElement("Stroke"), "Stroke"),
                                 MakeElement("Corner", 1)
                         }),
-                        AddThemeObject(SetProps(MakeElement("Label", "Name:"..game.Players.LocalPlayer.DisplayName.."", WindowConfig.HidePremium and 14 or 13), {
+                        AddThemeObject(SetProps(MakeElement("Label", "名::"..game.Players.LocalPlayer.DisplayName.."", WindowConfig.HidePremium and 14 or 13), {
                                 Size = UDim2.new(1, -60, 0, 13),
                                 Position = WindowConfig.HidePremium and UDim2.new(0, 50, 0, 19) or UDim2.new(0, 50, 0, 12),
                                 Font = Enum.Font.FredokaOne,
                                 ClipsDescendants = true
                         }), "Text"),
-                        AddThemeObject(SetProps(MakeElement("Label", "B&Z-X YYDS!", 12), {
+                        AddThemeObject(SetProps(MakeElement("Label", "半缝秋枫", 12), {
                                 Size = UDim2.new(1, -60, 0, 12),
                                 Position = UDim2.new(0, 50, 1, -25),
                                 Visible = not WindowConfig.HidePremium
@@ -650,8 +650,8 @@ function OrionLib:MakeWindow(WindowConfig)
                 MobileReopenButton.Visible = true
                 UIHidden = true
                 OrionLib:MakeNotification({
-                        Name = "B&Z-X:OrionLibeUI 已缩小",
-                        Content = " 点击窗口打开界面! \n 脚本作者：北极星 \n UI定制:Q3E4",
+                        Name = "秋枫:OrionLibe已缩小",
+                        Content = " 点击窗口打开界面! \n 窗口作者:Q3E4. \n 定制:1211373508. \n 这个«冷»笑死我了",
                         Time = 5
                 })
                 WindowConfig.CloseCallback()
